@@ -33,7 +33,7 @@ class PdfController extends Controller
            $search = stristr($text , $input);
 
            if($search){
-            $text = $search;
+            $text = strtok($search, " ");
            }else{
             $text = "No result found!";
            }
